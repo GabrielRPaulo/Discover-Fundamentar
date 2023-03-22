@@ -1,0 +1,309 @@
+<!-- Aula 1 (Input) 
+
+    <input>
+        - Um dos mais udados em formularios
+        - Aceita os mais diversos tipos de dados 
+        - Um dos mais poderosos e complexos 
+        - Elevado número de combinações
+
+    # Atributos
+        - Type
+        - name
+        - id
+
+    # Código de demonstração
+     <input type="password">
+-->
+<!-- Aula 2 (Input atributos) 
+
+    <input> Atributos comuns
+    - autocomplete (Busca no navegador dados usados com frequência) 
+
+     -> Ex: <input type="email" autocomplete="email">
+
+    - autofocus
+    - disabled
+    - readonly (quase todos)
+    - value
+    - form (ligar com outro formulario com "id") (quase todos)
+    - name
+    - required (quase todos) (para terminar o form é obrigatório preencher o campo que ele foi aplicado)
+    - placeholder (password, search, tel, text, url) (quase todos)        
+-->     
+<!-- Aula 3 (Password)
+
+    <input type="password">
+
+        - Colocar uma senha de maneira segura 
+        - Esconder o que está sendo digitado no campo 
+        - O estilo da apresentação do campo, depende do User Agent
+    # Atributos
+
+        - minlengt / maxlengt 
+            * O número min ou max de caracteres no campo
+        - Size
+            * O número aceitével de caracteres que esse campo deverá aceitar 
+        - pattern
+            * Expressão regular para validar o que está sendo digitado no campo.
+            * Altamente recomendado o uso de um padrão de segurança alta de senha.
+            * EX: queremos que a senha tenha valores hexadecimais com limite de no mínimo 4 e no máximo 8 caracteres.
+                * pattern="[0-9a-fA]{4,8}"
+        - placeholder 
+            * Mostra um exemplo de texto que deverá ser digitado no campo.
+        - readonly / disabled 
+            * Atributos booleano indicando se o campo
+             está habilittado ou não.
+        - required
+            * O campo será obrigatório.
+        - inputmode
+            * poderá alterar o uso do teclado em smartphones.
+            * EX: queremos que o cliente só adcione números.
+                -> inputmode="numeric"
+        - autocomplete
+            * on: permite a sugestão de: new-password ou curren-password.
+            * off: desabilita a função de autocomplete
+            * new-password: o navegador poderá sugerir uma nova senha
+            -> Ex: <form action="">
+                    <input type="password"
+                    autocomplete="new-password">
+                
+                    <button type="submit"> Envia</button>
+                </form>
+        -->
+<!-- Aula 4 (Email)
+
+    <input type="email"/>
+
+        - Espera que o usuario digite um Email
+        - Irá validar de o valor digitado é um Email
+    # Atributos
+    - placeholder (cria uma legenda no campo)
+    - readonly / disabled (Não permite que o campo seja usado)
+    - value (Atribue valor ao campo)
+    - required (Torna o campo obrigatorio) 
+    - multiple (o campo irá receber 1 ou mais emails, separados por vírgulas)
+    - size (valor númerico indicando o tamanho do campo)
+    - minlengt / maxlengt (O máx e mín de valores que o campo vai ter)
+    - pattern (Expressão regular para validar o que está sendo digitado no campo.) 
+    (ex: o usuário só poderá colocar email do domínio rocketseat.com.br
+    -> Ex: pattern=".+@rocketseat\.com\.br"
+    
+    <form action="">
+    <input type="email"
+    placeholder="Email"
+    required
+    pattern=".+@rocketseat\.com\.br"
+    title="SSSSSSSSS"
+    > 
+    <button type="submit"> Envia</button>    
+    </form>)
+    - list 
+        (o id de uma tag <datalist> que esta no documento)
+        (<dataliste> irá conter uma lista de valores pré definidos, a fim de sugerir ao usuário)
+
+-->
+<!-- Aula 5 (URL)
+
+     <input type="url"/>
+    
+        - Espera que o usuario digite uma url
+        - Irá validar de o valor digitado é uma url
+
+    # Atributos:
+
+    - placeholder (cria uma legenda no campo)
+    - readonly / disabled (Não permite que o campo seja usado)
+    - value (Atribue valor ao campo)
+    - required (Torna o campo obrigatorio) 
+    - size (valor númerico indicando o tamanho do campo)
+    - minlengt / maxlengt (O máx e mín de valores que o campo vai ter)
+    - pattern (Expressão regular para validar o que está sendo digitado no campo.) 
+    (ex: O usuario só poderá colocar dominios .com.br)
+    -> Ex: pattern=".*\.com\.br.*"
+
+    <form action="">
+    <input type="url"
+    placeholder="https://exemple.com.br"
+    required
+    pattern=".*\.com\.br.*" 
+    title="Somente dominios .com.br"
+    > 
+    <button type="submit"> Envia</button>    
+    </form>
+    - list 
+        (o id de uma tag <datalist> que esta no documento)
+        (<dataliste> irá conter exemplos de conteudos para o campo)
+-->
+<!-- Aula 6 (File)
+
+     <input type="file"/>
+    
+        - Usuuario poderá usar 1 ou mais arquivos para enviar no formulario
+       
+    # Atributos:
+
+    
+    - value (Contem o arquivo a ser enviado)
+    - multiple (Permite o envio de multiplos arquivos)
+    - accept (Descreve que tipo de arquivo será aceito {.png,.pdf,.docx,...})
+    - files (A lista de arquivo ou arquivos)
+
+    # Envio dos arquivos
+        - Para envio dos arquivos o formulario deverá utilizar o metodo POST e o atributo anctype como "multipart/form-data" 
+    
+    <input type="file"
+    accept=".png"
+    multiple >
+-->
+<!-- Aula 7 (Color)
+
+        <input type="color">
+    
+        - Interface para selecionar cor
+        - Color picker
+       
+    # Atributos:
+
+    
+    - value: RGB
+        -> Se inválido, o preto será exibido
+    
+
+    - list
+        (o id de uma tag <datalist> que esta no documento)
+        (<dataliste> irá conter exemplos de cores para o campo )
+
+    <input type="color" value="#00ffff">
+--> 
+<!-- Aula 8 (Checkbox) 
+
+    <input type="checkbox">
+
+    - Caixas que podem ser marcadas
+    - Selecionar um valor para ser enviado
+    - Se não selecionado, não sará enviado nenhum dado
+
+    #Atributos:
+    - globais 
+    - value
+        - valor que aquele campo contem
+        - se não estiver presente o valor é "on"
+    - checked
+        - para deixar o campo marcado por padrão
+
+    <input type="checkbox"> 
+-->
+<!-- Aula 9 (Hidden)
+
+     <input type="hidden" id="timestamp" name="timestamp" value="12413542542">
+
+     - Invisível ao usuário 
+     - Será enviado com o formulário
+     - Não receberá foco
+     - Leitor de tela não percebem esse campo
+-->
+<!-- Aula 10 (Radio) 
+
+    <input type="radio">
+        - Selecionado para escolher uma única opção de varioas opções
+
+    # Atributos essenciais:
+        - checked
+            indica que o campo foi marcado
+        - value 
+            valor que aquele campo contém
+-->
+<!-- Aula 11 (Textarea)
+
+    <textarea>
+        - Mais de uma linha 
+        - Útil para textos grandes 
+
+    # Atributos 
+    - id
+    - name
+    - rows e cols
+    - maxlength e minlength
+    - wrap (Não quebra a linha)
+    ... outrod comuns aos <input>s
+        -> autocomple, autofocus, disabled, placeholder, readonly, form, required
+-->
+<!-- Aula 12 (Select)
+
+    <select>
+    - Controle que oferece um menu de opções.
+    
+    <option> (faz parte do select).
+    - Contém elementos a serem selecionados.
+    - Atributos necessarios
+        - value.
+
+    # Atributos únicos.
+    - multiple
+        Habilita múltiplas opções.
+    - size 
+        Quantas opções visíveis.
+-->
+<!-- Aula 13 (Optgroup)
+
+    <optgroup>
+    - Faz o agrupamento dos options dentro do select 
+-->
+<!-- Aula 14 (Search)
+
+    <input type="search">
+
+    - Para campos de busca
+    - É igual ao campo do tipo 'text', mas poderar ser diferente dependendo o user agent
+
+    # Atributos:
+    - list / <datalist>
+    - pattern
+    - arial-label
+-->
+<!-- Aula 15 (Number)
+    
+    <input type="number">
+
+    - Entrada de números 
+
+    # Atributos:
+    - min/max
+    - step
+
+    <form action="">
+    <input type="number" min="6" max="7888">
+
+    <button>Enviar</button>
+    </form>
+-->
+<!-- Aula 16 (Range)
+
+    <input type="range">
+
+    - Console para selecionar valor númerico
+    - Slider ou dial control
+
+    # Atributos:
+    -min/max
+    -step
+
+    <form action="">
+    <input type="range" min="25" max="100" step="5" value="1">
+
+    <button>Enviar</button>
+    </form>
+-->
+<!-- Aula 17 (Data e hora)
+
+    -Outros campos interessantes 
+    (Mas ainda não tem um bom suporte pelos user agents)
+
+    ficar de olho em https://caniuse.com
+    
+    <input type="date" value="2002-05-04"> <br>
+    <input type="datetime-local" ><br>
+    <input type="month"> <br>
+    <input type="time"><br>
+    <input type="week">
+-->

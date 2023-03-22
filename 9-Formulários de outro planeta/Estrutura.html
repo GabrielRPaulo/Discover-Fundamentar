@@ -1,0 +1,135 @@
+<!-- Abertura
+    Formulários
+
+    Para que serve? :
+    - Capturar dados de entrada (input)
+    - Interação
+    - Controles
+
+    Pré requisitos: 
+    - Básico de HTML
+
+    Dominar: 
+    - Estilização
+    - Validação
+    - Controles customizados
+    - Javascript 
+-->
+<!-- Aula 1 (Form)
+
+    <form>
+        - Elemento que definirá um formulário
+        - É um conteiner estilo <section> <footer>
+
+        Atributos básicos
+        - action (Pra onde vai ser enviado) -> Se deixar vaziu vai para a mesma página.
+        - method (Verbos http) -> Forma que a url esta escrita, se deixar vaziu vira "GET".
+
+        <form action="" method="">
+            Dados do formulário
+            -> Não pode fazer um "form" dentro de outro
+        </form>
+-->
+<!-- Aula 2 (Fieldset legend) 
+
+    <fieldset>
+        - Agrupamento de campo
+        - Mesmo propósito
+        - Semâtico
+        - Acessibilidade
+
+    Atributos especiais
+        -disabled
+            - Desabilita todos os elementos internos
+            - Não serão envidados ao submeter o formúlario
+        -form
+            - O id de um formulário ao esse fildset pertence
+            - Não precisa estar dentro do formulário
+        -name
+            - Nome do grupo
+    <legend>
+        - Nome do agrupamento
+        - Primeiro elemento dentro do fieldset    
+
+        <form action="">
+            <fieldset>
+                <legend>Contato</legend>
+            </fieldset>
+        </form>
+-->
+<!-- Aula 3 (Label)
+
+    <label>
+        - associar e identificar uma (ou mais) tag de entrada de dados
+        - acessiblidade
+        - você poderá clicar para mudar o foco da entrada de dados
+
+    Atributos 
+        -for
+            - Para fazer a conexão entre este label e a tag de entrada de dados
+            - É feito via id input (obrigaório)
+            - Só funciona com elementos específicos 
+                -button, input (not hidden), meter, output, progress,select,textarea
+-->
+<!-- Aula 4 (Button)
+
+    <button>
+
+        - Representa um botão
+        - Usado para enviar formulários
+        - É estilizado pelo user agent (o propri navegador)
+
+    Atributos comuns
+        -types
+            - submit (Envia o formulário)
+            - reset (Limpa a linha que estava escrevendo ou o formulário)
+            - button (Faz a mesma função do "submit", mas é melhor utilizar o "submit" para deixar o código mais intendível)
+
+        - autofocus 
+        - dasebled
+        - name
+        - value
+        - form
+-->
+<!-- Aula 5 (Datalist)
+
+    <datalist>
+
+        - Lista de valores como usa sugestão a uma tag <input>
+        - Valores sujeridos e não obrigatórios 
+        - Usuários poderam selecionar um dos valores, ou colocar um valor diferente da sugestão
+
+    # list
+        - Recebe como volor um id de um <datalist> residente no mesmo documento
+
+    # Tipos de input suportados
+        - text, search, url, tel, email, date, month, week, time, daretime-local, number, range e color.
+
+        * Valores de datalist que não são compatíveis com o tipo do <input> não seram apresentados.
+    
+    # Tipos de <input> não suportados
+        - hidden, password, checkbox, radio, file, ou qualquer tipo de button.
+
+    # User-Agent
+        - Verificar a compatibilidade com o browser https://caniuse.com
+
+    # Código de demonstração 
+        
+        <input 
+        type="text" 
+        list="fruitdata" 
+        placeholder="escolha uma fruta"/>
+    
+        <datalist id="fruitdata">
+            <option>mango</option>
+            <option>orange</option>
+            <option>cherry</option>
+        </datalist>
+    
+       <datalist id="color">
+        <option>#ff0000</option>
+        <option>#00ff00</option>
+       </datalist>
+    
+        <input type="color" list="color">
+-->

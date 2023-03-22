@@ -1,0 +1,72 @@
+/* Aula 1 (Introdução)
+
+    Cores:
+    Usamos CSS para alterar cores do nosso documento.
+
+    Tipos
+    background-color (para caixas)
+    color (para textos)
+    border-color (para caixas)
+    outros
+    Valores
+    Podemos definir valores por:
+
+    palavra-chave (blue, transparent)
+    hexadecimal (#990011)
+    funções: rgb, rgba, hsl, hsla
+*/
+/* Aula 2 (Keyword named values)    
+
+    HTML:
+
+    <div>
+        <h1>Um texto aqui</h1>
+        <p>Mais texto</p>
+    </div>
+    CSS:
+
+    div {
+        color: blue;
+    }
+
+    h1 {
+        color: red;
+    }
+
+*/ 
+/* Aula 3 (Hexadecimal)
+
+        <hex-color> values 0-9 e A-F
+    color: #090;  RED, GREEN, BLUE 
+    color: #009900;
+    color: #090a;
+    color:#009900aa;
+*/
+/* Aula 4 (RGB)
+
+      RGB → Red, Green e Blue
+O alpha representa a transparência da cor
+
+    <rgb()> values:
+color: rgb(34, 12, 64, 0.6)  0-255 
+color: rgba(34, 12, 64, 0.6)
+*/
+/* Aula 5 (HSL)
+
+    color: hsl(180, 100%, 50%, 60%)
+    color: hsla(180, 100%, 50%, 60%)
+
+*/
+/* Aula 6 (Global values)    
+
+         Global values 
+    color: inheritr;  Herda a cor do elemento anterior 
+    color: initial;  Volta a sua cor inicial 
+    color: unset;  Pega a cor do contexto 
+*/
+/* Aula 7 (Conclusão)
+
+    Entendendo esses princípios e com a prática, fica cada vez mais fácil entender como aplicar cores no CSS.
+
+    Referência
+    https://developer.mozilla.org/en-US/docs/Web/CSS/color_value

@@ -1,0 +1,244 @@
+<!-- Aula 1 (Tabelas)
+   
+Estaremos vendo agora sobre o elemento <table>, que ajuda na organização de dados, criando tabelas.
+
+Prós
+
+Visualização de dados via linhas e colunas.
+Boa acessibilidade para leitura dos dados Contras
+Pouco flexível
+Precisa de estilização para melhor visualização Não usar
+Para criar seu layout
+-->
+<!-- Aula 2 (Organizando Tabelas) 
+    
+    <table>
+
+    <caption>Pessoas por idade</caption>
+
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mayk</td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <td>Diego</td>
+            <td>25</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Total:</td>
+            <td>2 Pessoas</td>
+        </tr>
+    </tfoot>
+
+</table> 
+-->
+<!-- Aula 3 (Tabela básica) 
+    
+        Para fazer uma tabela básica, apenas precisaremos da tag <table></table>, dentro dela iremos usar a tag <tr></tr>(table row) para criar uma linha na tabela, e dentro dela usaremos a tag <th></th> para o cabeçalho.
+
+    Depois faremos o tr novamente, só que agora não sendo o cabeçalho, e sim o td.
+
+    Ficará da seguinte foram:
+
+    <table>
+    <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+    </tr>
+    <tr>
+        <td>Mayk</td>
+        <td>35</td>
+    </tr>
+    <tr>
+        <td>Diego</td>
+        <td>25</td>
+    </tr>
+    </table>
+-->
+<!-- Aula 4 (Tabela complexa)   
+    
+Estaremos criando uma tabela bem mais complexa, com alguns atributos a mais e uma acessibilidade a mais para tabelas complexas.
+
+Faremos uma tabela que contém 2 lojas, onde estaremos vendo quantos produtos foram vendidos e produzidos e agruparemos por nome dos produtos.
+-->   
+<!-- Aula 5 (THead complexa)
+       
+        <table>
+
+        <caption>Produzidos X Vendidos por loja</caption>
+
+        <thead>
+
+        <tr>  
+            <th rowspan="2"></th>
+            <th colspan="2">Browniezada</th>       
+            <th colspan="2">Macaco prego</th>
+        </tr>    
+
+        <tr>
+            <th>Produzidos</th>
+            <th>Vendidos</th>
+            <th>Produzidos</th>
+            <th>Vendidos</th>
+        </tr>
+
+        <tbody>
+
+            <tr>
+                <th>Doces</th>
+                <td><>
+
+            </tr>
+
+        </tbody>
+
+    </thead> 
+-->
+<!-- Aula 6 (TBody complexo)
+    
+ 
+ <table>
+
+    <caption>Produzidos X Vendidos por loja</caption>
+
+    <thead>
+
+    <tr>  
+        <th rowspan="2"></th>
+        <th colspan="2">Browniezada</th>       
+        <th colspan="2">Macaco prego</th>
+    </tr>    
+
+    <tr>
+        <th>Produzidos</th>
+        <th>Vendidos</th>
+        <th>Produzidos</th>
+        <th>Vendidos</th>
+    </tr>
+
+    <tbody> 
+        <tr>
+            <th>Brownies</th>
+            <td>100</th>
+            <td>86</th>
+            <td>58</td>
+            <td>37</td>    
+        </tr>
+    </tbody>
+    <tbody> 
+        <th>Cookies</th>
+        <td>63</td>
+        <td>58</td>
+        <td>130</td>
+        <td>123</td>
+
+    </tbody>
+        
+ </thead> 
+-->
+<!-- Aula 7 (Melhorando o aspecto com colgroup)
+
+
+ <table>
+
+    <caption>  Produzidos X Vendidos por loja</caption>
+    
+    <colgroup>
+        <col>
+        <col span="2" style="background-color: purple;">
+        <col span="2"style="background-color: goldenrod;">      
+    </colgroup>
+
+    <thead>
+
+    <tr>  
+        <th rowspan="2"></th>
+        <th colspan="2">Browniezada</th>       
+        <th colspan="2">Macaco prego</th>
+    </tr>    
+
+    <tr>
+        <th>Produzidos</th>
+        <th>Vendidos</th>
+        <th>Produzidos</th>
+        <th>Vendidos</th>
+    </tr>
+
+    <tbody> 
+        <tr>
+            <th>Brownies</th>
+            <td>100</th>
+            <td>86</th>
+            <td>58</td>
+            <td>37</td>    
+        </tr>
+    </tbody>
+    <tbody> 
+        <th>Cookies</th>
+        <td>63</td>
+        <td>58</td>
+        <td>130</td>
+        <td>123</td>
+
+    </tbody>
+        
+    </thead>  
+-->    
+<!--Aula 8 (Melhorando acessibilidade)
+-->
+    
+<table>
+
+        <caption>  Produzidos X Vendidos por loja</caption>
+        
+        <colgroup>
+            <col>
+            <col span="2" style="background-color: purple;">
+            <col span="2"style="background-color: goldenrod;">      
+        </colgroup>
+    
+    <thead>
+    
+        <tr>  
+            <th rowspan="2"></th>
+            <th colspan="2" scope="colgroup" >Browniezada</th>       
+            <th colspan="2" scope="colgroup" >Macaco prego</th>
+        </tr>    
+    
+    
+        <tr>
+            <th scope="col">Produzidos</th>
+            <th scope="col">Vendidos</th>
+            <th scope="col">Produzidos</th>
+            <th scope="col">Vendidos</th>
+        </tr>
+    </thead>
+        <tbody> 
+            <tr>
+                <th scope="row">Brownies</th>
+                <td>100</th>
+                <td>86</th>
+                <td>58</td>
+                <td>37</td>    
+            </tr>
+        </tbody>
+        <tbody> 
+            <th scope="row">Cookies</th>
+            <td>63</td>
+            <td>58</td>
+            <td>130</td>
+            <td>123</td>
+    
+        </tbody>
+</table>
+
+
