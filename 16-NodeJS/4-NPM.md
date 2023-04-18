@@ -46,7 +46,19 @@ __Glossary: Dependencies, Peckages, Modules__ : Significam praticamente a mesma 
 - Para utilizar fiz assim:
     * coloquei "start": "node index.js" na parte script do json e criei a pasta 'index.js' para poder rodar normalmente
     * Na pasta index coloquei um console.log('mensagem de teste') e coloquei no terminal(bash) npm run start ou npm start. obs: Apenas o `start` consegue rodar sem o `run` na frente.
+# Aula 8 (Instalando dependências globais)
 
+- Intalando um pacote de maneira global.
+- Para instalar o módulo que deseja deve colocar o `npm i 'nome do pacote' -g`, o '-g' que vai instala de maneira global.
+- Para saber onde foi instalado deve usar `npm root -g`
+- Para desistalar o pacote deve usar `npm uninstall 'nome do pacote' -g`
+# Aula 9 (Gerenciando versões das dependências)
 
+- Para mudar de versão do pacote você pode utilizar `npm i 'nome do pacote'@'versão que deseja'` por exemplo `npm i moment@1.7.1` -> essa ate pode não ser a mais atual mas essa vai ser a versão que irá rodar na maquina.
+- Para vizualizar as outras versões possivel deve utilizar `npm outdated` e irá mostrar qual versão que está rodando, a sugerida por parte do autor do pacote e a mais recente.
+- Depois que foi feito o `npm outdated` para atualizar o pacote pode-se usar o `npm upgrade`, assim mudará para a versão sugerida pelo autor.
+- Mas se quiser utilizar a mais atual deve usar `npm i 'nome do pacote'@latest`.
+# Aula 10 (Removendo pacotes)
 
+- Para remover deve utilizar `npm uninstall 'nome do pacote'`
 
